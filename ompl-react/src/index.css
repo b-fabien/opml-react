@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: inline-block;
+    width: 100%;
+    text-align: center
+}
+
+ul {
+    border: 1px solid black;
+    width: 80%;
+    display: inline-block;
+    min-height: 10px;
+}
+input{
+    margin-top:100px 
+}
+li{
+    height: 70px;
+    display: block;
+    border:1px dotted black;
+vertical-align: middle;
+line-height: 70px;
+font-size: 2em
+}

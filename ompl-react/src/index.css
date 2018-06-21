@@ -20,7 +20,7 @@ li{
     height: 70px;
     display: block;
     border:1px dotted black;
-vertical-align: middle;
-line-height: 70px;
-font-size: 2em
+    vertical-align: middle;
+    line-height: 70px;
+    font-size: 2em
 }

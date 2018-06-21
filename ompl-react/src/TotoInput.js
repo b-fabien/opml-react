@@ -6,11 +6,14 @@ handleChange() permets d'obtenir en direct ce qui est écri dans le champ.
 
 */ 
 class TotoInput extends React.Component {   
+
     constructor(props){
+        
         super(props)
         this.state={
             content:''
         }
+
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
@@ -20,10 +23,12 @@ class TotoInput extends React.Component {
     }
 
     handleSubmit(event) {
+
         event.preventDefault()
-    
         let newContent = this.state.content;
+
         if(newContent) {
+
             this.props.submitContent(newContent)
             this.setState(
                 {content:''}
@@ -32,7 +37,9 @@ class TotoInput extends React.Component {
     }
 
     render() {
+
         return ( 
+
         <form onSubmit={this.handleSubmit}>
             <input value={this.state.content} placeholder= "ajouter une tache" onChange={this.handleChange}/>
             <input type="submit" value="Submit" /> 

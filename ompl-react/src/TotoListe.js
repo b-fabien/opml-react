@@ -8,8 +8,8 @@ et on retourne la liste dans le <ul>
 
 */
 const TotoListe = (props) =>  {
-    const listItems = props.listItems
 
+    const listItems = props.listItems
     const liste = listItems.map((item, index) =>
     
         <li style={{marginLeft:(item.level*20)+'px'}} onClick={()=>props.handleClick(index)}>
@@ -18,6 +18,7 @@ const TotoListe = (props) =>  {
     )
 
     return (
+        
         <ul>{liste}</ul>
     )
 }

@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+/*
+toutes les données entrées dans l'application passe par l'input qui les stocke dans l'objet content du state à la soumission du formulaire
+handleChange() permets d'obtenir en direct ce qui est écri dans le champ.
 
+*/ 
 class TotoInput extends React.Component {   
     constructor(props){
         super(props)

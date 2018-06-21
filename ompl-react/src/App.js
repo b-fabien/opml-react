@@ -2,6 +2,13 @@ import React, { Component } from 'react';
 import TotoInput from './TotoInput';
 import TotoListe from './TotoListe';
 
+/*
+la fonction appellée par le composant input embarque les props et mets à jours les states du composant Todo avec setState un spread est éffectué sur le state de base (avec prevState) et on lui rajoute le nouvel objet.
+
+un objet dont la clé et la valeur ont le même nom peut etre écrit avec seulement le nom en commun
+{exmeple='exemple'} == {exemple}
+*/
+
 class Todo extends Component {
   constructor(props){
     super(props)
@@ -14,17 +21,13 @@ class Todo extends Component {
   }
 
   submitContent(content){
-    /*
-    la fonction appellée par le composant input embarque les props et met a jours les states du composant APP avec setState   un spread est éffectué sur le state de base (avec prevState) et on lui rajoute le nouvel objet
-    un objet dont la clé et la valeur ont le meme nom peut etre ecri seulement le nom en commun
-    */
+
     this.setState( (prevState) => {
       return {listItem:[...prevState.listItem, {content:content,level:0}]}
     })
   }
 
   handleClick(index){
-    console.log(index)
     const newArr = [...this.state.listItem]
     newArr[index] = { ...newArr[index],
        level: this.state.listItem[index].level ? 
@@ -47,8 +50,5 @@ class Todo extends Component {
     );
   }
 }
-
-
-
 
 export default Todo;

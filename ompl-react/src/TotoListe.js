@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 /*
 on prend la liste recu par le parents transportée par les props
 on map dessus pour itérer sur chaque item les fonctions et la valeur du level donnée par l'index au tout début

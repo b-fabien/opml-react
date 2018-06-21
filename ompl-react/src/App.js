@@ -3,10 +3,17 @@ import TotoInput from './TotoInput';
 import TotoListe from './TotoListe';
 
 /*
-la fonction appellée par le composant input embarque les props et mets à jours les states du composant Todo avec setState un spread est éffectué sur le state de base (avec prevState) et on lui rajoute le nouvel objet.
+l'app attend une liste d'item 
+le tableau est initialisé dans les state
+on blind les this des évènements
+
+submitContent() appellée par le composant inputtodo embarque les props et mets à jours les states du composant Todo avec setState un spread est éffectué sur le state de base (avec prevState) et on lui rajoute le nouvel objet.
 
 un objet dont la clé et la valeur ont le même nom peut etre écrit avec seulement le nom en commun
 {exmeple='exemple'} == {exemple}
+
+handleClick() appellée au click sur le composant todoliste transporte l'index de l'item cliqué pour le réutiliser
+il se comporte comme un toggle sur la valeur 'level' en lui incrémentant 1 ou -1 pour effectuer l'indentation 
 */
 
 class Todo extends Component {
